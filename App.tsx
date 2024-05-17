@@ -8,6 +8,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import JuraVariable from './assets/fonts/JuraVariable.ttf';
 import { useFonts } from 'expo-font';
 import { Home } from './assets/Views/Home';
+import { Search } from './assets/Views/Search';
 
 export const UserContext = React.createContext<{ activePage: string | null; setActivePage: React.Dispatch<React.SetStateAction<string | null>> } | null>(null);
 
@@ -28,6 +29,17 @@ export default function App() {
 								<Stack.Screen
 									name="home"
 									component={Home}
+									options={{
+										contentStyle: {
+											backgroundColor: '#3D3431',
+											padding: 15
+										},
+										headerShown: false
+									}}
+								/>
+								<Stack.Screen
+									name="search"
+									component={Search}
 									options={{
 										contentStyle: {
 											backgroundColor: '#3D3431',
