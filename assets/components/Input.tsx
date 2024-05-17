@@ -1,24 +1,19 @@
 import { StyleSheet, TextInput } from 'react-native';
+import { input } from '../style/Input';
 
 export function Input({ textChanged, placeholder }: { textChanged: any; placeholder: string }) {
 	return (
 		<TextInput
 			placeholderTextColor={'#ffffff50'}
-			style={input.textInput}
+			style={[input.input, inputStyle.input]}
 			onChangeText={textChanged}
 			placeholder={placeholder}
 		/>
 	);
 }
 
-const input = StyleSheet.create({
-	textInput: {
-		width: '100%',
-		borderWidth: 2,
-		borderColor: '#FB5812',
-		borderRadius: 15,
-		paddingHorizontal: 15,
-		paddingVertical: 5,
-		color: '#fff'
+const inputStyle = StyleSheet.create({
+	input: {
+		paddingVertical: 15
 	}
 });

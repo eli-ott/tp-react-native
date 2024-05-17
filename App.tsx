@@ -14,6 +14,7 @@ export const UserContext = React.createContext<{ activePage: string | null; setA
 
 export default function App() {
 	const [activePage, setActivePage] = useState<string | null>('home');
+  
 	const Stack = createNativeStackNavigator();
 	const [fontLoaded] = useFonts({
 		Jura: JuraVariable
