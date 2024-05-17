@@ -3,7 +3,7 @@ export interface RoverImages {
 	sol: number;
 	camera: RoverCamera;
 	img_src: string;
-	earth_date: Date;
+	earth_date: string;
 	rover: Rover;
 }
 
@@ -17,11 +17,11 @@ export interface RoverCamera {
 export interface Rover {
 	id: number;
 	name: string;
-	landing_date: Date;
-	launch_date: Date;
+	landing_date: string;
+	launch_date: string;
 	status: string;
 	max_sol: number;
-	max_date: Date;
+	max_date: string;
 	total_photos: number;
 	cameras: AvailableCameras[];
 }
